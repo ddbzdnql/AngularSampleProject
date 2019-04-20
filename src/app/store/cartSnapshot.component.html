@@ -1,0 +1,19 @@
+<div class="card bg-light" style="width: 200px">
+	<h5 class="card-title text-dark m-2 p-2" style="font-family: Helvetica; font-weight: bold; text-align: center">Your Cart:</h5>
+	<div class="card-body border-top text-dark text-left mb-0" 
+		style="font-family: Arial; font-weight: 450; position: relative; left: 1px"
+		*ngFor="let i of cart.lines">
+		{{i.product.name}}:
+		<span class="float-right"> 
+			<button class="btn btn-sm bg-light" 
+					(click)="incQuantity(i)">
+				<i class="fa fa-plus"></i>	
+			</button> {{i.quantity}} 
+			<button class="btn btn-sm bg-light" 
+					(click)="decQuantity(i)"
+					[disabled]="i.quantity==0">
+				<i class="fa fa-minus"></i>
+			</button>			
+		</span>
+	</div>
+</div>
