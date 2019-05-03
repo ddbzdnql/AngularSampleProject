@@ -45,7 +45,7 @@ export class StoreComponent {
 
 	addProductToCart(product: Product, quantity: number = 1){
 		this.cart.addLine(product, quantity);
-		this.router.navigateByUrl("/cart");
+		//this.router.navigateByUrl("/cart");
 	}
 
 	getPageSequence(): number[] {

@@ -39,6 +39,12 @@ export class Cart{
 		this.cartPrice = 0;
 		this.lines.forEach((c) => {this.itemCount += c.quantity; this.cartPrice += c.lineTotal});
 	}
+
+	public clear(){
+		this.lines = [];
+		this.itemCount = 0;
+		this.cartPrice = 0;
+	}
 }
 
 export class CartLine{

@@ -11,4 +11,12 @@ export class CartDetailComponent {
 	constructor(c : Cart){
 		this.cart = c;
 	}
+
+	inc(l){
+		this.cart.updateQuantity(l.product, 1);
+	}
+
+	dec(l){
+		this.cart.updateQuantity(l.product, -1);
+	}
 }
